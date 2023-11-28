@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+.DadosPrincipais{
+    width: 70%;
+    height: 20%;
+   display: grid;
+   grid-template-columns: 45% 45%;
+   grid-template-rows: 100%;
+   margin-bottom: 5ch;
+
+    
+}
+.SpanInput{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+
+}
+.SpanInput span{
+    align-self: flex-end;
+    text-align: end;
+    font-size: 1.4ch;
+}
+
+.Dados1, .Dados2{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+
+}
+.Dados1 input, .Dados2 input{
+    background-color: transparent;
+    height: 3.5ch;
+    margin-top: 2ch;
+    margin-left: 1ch;
+    border:0.1ch solid #cacaca;
+}
+.Dados1 input:focus, .Dados2 input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.DadosAdicionais{
+    height: 60%;
+    width: 70%;
+    
+    }
+.navegacaoDadosAdicionais{
+    width: 100%;
+    height: 2ch;
+    display: flex;
+    justify-content: center;
+
+
+}
+.navegacaoDadosAdicionais > ul {
+    display: flex;
+    flex-direction: row;
+    height: 3ch;
+
+}
+.navegacaoDadosAdicionais ul li {
+padding: 0.2ch;
+width: 20ch;
+height: 3ch;
+text-align: center;
+list-style: none;
+font-size: 1.2ch;
+}
+
+.contentDadosAdicionais{
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 100%;
+    border: 0.1ch solid #cacaca;
+}
+.btnContentDadosAdicionais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#faf8f900;
+    
+}
+.btnContentDadosAdicionais  button{
+    
+    width: 100%;
+     font-size: 10px; 
+    height: 3ch;
+    margin-top: 1ch;
+    border-radius: 0;
+    border: 0.1ch solid #cacaca;
+}
+#btnNavDadosAdicionais{
+    height: 20%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.ResultDadosAdicionais{
+    background-color:#faf8f900;
+    overflow-y: auto;
+    padding: 2ch;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.result {
+    width: 90%;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead > tr{
+    background: #cacaca3d;
+    height: 3.5ch;
+    text-align: left;
+    padding: 1ch;
+    border-bottom: 0.1ch solid #cacaca;
+
+}
+
+
+
+td,  th{
+    padding: 1ch;
+    border: 0.1ch solid #cacaca;
+
+}
+/*=================================scroll=================================================*/
+.ResultDadosAdicionais::-webkit-scrollbar {
+    width: 0.7ch; 
+    height: 0.7ch;           
+  }
+  
+  .ResultDadosAdicionais::-webkit-scrollbar-track {
+    background: #f4f8f9;       
+  }
+  
+.ResultDadosAdicionais::-webkit-scrollbar-thumb {
+    background-color: #59cbe8;   
+    border-radius: 3ch;       
+    
+  }
+  
