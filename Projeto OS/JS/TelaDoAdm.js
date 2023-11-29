@@ -32,21 +32,21 @@ document.getElementById("Home").addEventListener("click", function(event) {
     loadHTML("HomeAdm.html", document.getElementById("contentDiv"));
 });
 
-document.getElementById("cadastroClientes").addEventListener("click", function(event) {
+document.getElementById("Cadastros").addEventListener("click", function(event) {
     event.preventDefault();
    
     setActiveOption("Cadastros");
-    loadHTML("Cadastros/cadastroClientes.html", document.getElementById("contentDiv"));
+    loadHTML("Cadastros/CadastroClientes.html", document.getElementById("contentDiv"));
     
 });
 
 
 
-document.getElementById("cadastroProdutos").addEventListener("click", function(event) {
+document.getElementById("Produtos").addEventListener("click", function(event) {
     event.preventDefault();
     setActiveOption("Produtos");
 
-    loadHTML("Cadastros/CadastroIncluir/incluirClientes.html", document.getElementById("contentDiv"));
+    loadHTML("Cadastros/CadastroIncluir/Reservas.html", document.getElementById("contentDiv"));
 });
 
 

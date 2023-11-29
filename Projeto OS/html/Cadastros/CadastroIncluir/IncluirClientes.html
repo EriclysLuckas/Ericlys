@@ -3,120 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/STYLE/Cadastros/CadastroIncluir/CadastroIncluir.css">
+    <title>Cadastro de clientes</title>
+    <link rel="stylesheet" href="/Projeto OS/STYLE/Cadastros/CadastroClientes.css">
 </head>
 <body>
-    <main class="FormsCadastrosClientes">
-        <div class="DadosPrincipais">
-
-            <div class="Dados1">
-                    <div class="SpanInput">
-                    <span>Razão social</span>
-                    <input type="text" name="" id="">
-
-                </div>
-                <div  class="SpanInput">
-                    <span>Cnpj </span>
-                    <input type="text" name="" id="">
-                </div>
-                <div  class="SpanInput">
-                    <span>Inscrição Estadual</span>
-                    <input type="text" name="" id="">
-                </div>
-            </div>
-            
-            <div class="Dados2">
-                <div  class="SpanInput">
-                    <span>Razão social</span>
-                    <input type="text" name="" id="">
-    
-                </div >
-                <div  class="SpanInput">
-                    <span>Cnpj </span>
-                    <input type="text" name="" id="">
-                </div>
-                   <div  class="SpanInput">
-                    <span>Inscrição Estadual</span>
-                    <input type="text" name="" id="">
-                </div>
-            </div>
-
-
+<div class="contentCadastros">
+    <main class="Header">
+        <div class="contentHeader">
+        <div class="TituloHeader">
+            <span><ion-icon name="people-sharp"id ="iconeTitulo" ></ion-icon></span><p>Clientes </p>
         </div>
-
-        <div class="DadosAdicionais">
-
-           
-                    <div class="navegacaoDadosAdicionais">
-                    <ul>     
-                    <li >
-                        Endereços
-                    </li>
-                    <li>
-                        Equipamentos
-                    </li>
-                    <li>
-                        Contatos
-                    </li>
-                    </ul> 
-                </div>
-                
-           <div class="contentDadosAdicionais">
-                <div class="btnContentDadosAdicionais">
-                    <div id="btnNavDadosAdicionais"> 
-                        <button>Excluir</button>
-                        <button>Incluir</button>
-                    </div>
-                </div>
-                <div class="ResultDadosAdicionais">
-                    <div class="result">
-                        <div class="HeaderResult">
-
-                        </div>
-                        <table class="table"> 
-                            <thead>
-                                <tr>
-                                    <th>Cep</th>
-                                    <th>Rua</th>
-                                    <th>Número</th>
-                                    <th>Bairro</th>
-                                    <th>Cidade</th>
-                                    <th>Estado</th>
-
-            
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>teste</td>
-                                    <td>1111111111111</td>
-                                    <td>ISENTO</td>
-                                    <td>ISENTO</td>
-                                    <td>ISENTO</td>
-                                    <td>ISENTO</td>
-
-            
-                                </tr>
-                                <tr>
-                                    <td>teste</td>
-                                    <td>1111111111111</td>
-                                    <td>ISENTO</td>
-                                    <td>ISENTO</td>
-                                    <td>ISENTO</td>
-                                    <td>ISENTO</td>
-
-
-                                   
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-           </div>
+        <div class="BtnAdd"> <button>+ Adicionar</button></div>
         </div>
-
-
     </main>
+
+
+
+
+
+    <div class="CampoDePesquisa"> 
+        <span id="Busca">Buscar</span>
+
+        <div class="PesquisaContent">
+            <input type="text" id="txtBusca" placeholder=""/>
+            <span> <ion-icon name="search-outline"  id="iconeLupa" ></ion-icon></span>
+        </div>
+    </div>
+
+
+    <div class="ListaCadastros">
+        <div class="ListaCadastrosClientes">
+            <table class="table"> 
+                <thead>
+                    <tr>
+                        <th>Razão social</th>
+                        <th>CNPJ</th>
+                        <th>Inscrição Estadual</th>
+                        <th class="AcaoBtn" id="Acaobtn">        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>teste</td>
+                        <td>1111111111111</td>
+                        <td>ISENTO</td>
+                        <td class="AcaoBtn"> <button class="DeleteBtnClientes"><ion-icon name="trash"></ion-icon></button> <button class="AlterarBtnClientes"><ion-icon name="create"></ion-icon></button></td>
+                       
+
+                    </tr>
+                    <tr>
+                        <td>teste</td>
+                        <td>1111111111111</td>
+                        <td>ISENTO</td>
+                        <td class="AcaoBtn"> <button class="DeleteBtnClientes"><ion-icon name="trash"></ion-icon></button> <button class="AlterarBtnClientes"><ion-icon name="create"></ion-icon></button></td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
