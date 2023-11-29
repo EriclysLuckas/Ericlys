@@ -29,7 +29,7 @@ document.getElementById("Home").addEventListener("click", function(event) {
     event.preventDefault();
     setActiveOption("Home");
 
-    loadHTML("HomeAdm.html", document.getElementById("contentDiv"));
+    loadHTML("Cadastros/CadastroClientes.html", document.getElementById("contentDiv"));
 });
 
 document.getElementById("Cadastros").addEventListener("click", function(event) {
@@ -88,7 +88,7 @@ function loadHTML(file, elmnt) {
 
 includeHTML();
 window.addEventListener("DOMContentLoaded", function() {
-    loadHTML("HomeAdm.html", document.getElementById("contentDiv"));
+    loadHTML("Cadastros/CadastroClientes.html", document.getElementById("contentDiv"));
     
 });
 

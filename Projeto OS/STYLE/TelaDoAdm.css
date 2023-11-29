@@ -14,14 +14,14 @@ body {
     grid-template-rows: auto auto auto auto auto auto;
     min-height: 100%;
     min-width: 100vw;
-    background: #f4f8f9;
+    background: #eff1f3;
 }
 
 /* ========================== Header =======================================*/
 header{
     width: 100%;
     height: 5ch;
-    background-color: #f4f8f9;
+    background-color: #eff1f3;
     border-bottom:  0.1ch solid #cacaca;
     grid-column: 1/7;
     
@@ -40,7 +40,7 @@ max-height: 100%;
 /* ========================== Menu Lateral =======================================*/
 .Lista.active span{
     transition: 10ms;
-    color: #59cbe8;
+    color: #a7e7f6;
   }
  
 
@@ -77,10 +77,10 @@ max-height: 100%;
 
 
 .MenuN ul li:hover {
-    background: #f4f8f9;
+    background: #eff1f3;
 }
 .MenuN ul span:hover {
-    color: #59cbe8;
+    color: #a7e7f6;
 }
 
 .MenuN ul li a {
@@ -134,7 +134,7 @@ max-height: 100%;
 
 }
 .submenu a:hover {
-color: #59cbe8;
+color: #a7e7f6;
 }
 .submenu li a {
     display: flex;
@@ -166,11 +166,11 @@ color: #59cbe8;
   }
   
   .main::-webkit-scrollbar-track {
-    background: #f4f8f9;       
+    background: #eff1f3;       
   }
   
 .main::-webkit-scrollbar-thumb {
-    background-color: #59cbe8;   
+    background-color: #a7e7f6;   
     border-radius: 3ch;       
     
   }
@@ -225,6 +225,99 @@ section.principal {
 
 }
 
+
+reservabtn, .saibaMaisbtn {
+    background: #3fcef6;
+    color: #eff1f3;
+    cursor: pointer;
+    width: 20ch;
+    height: 4ch;
+    border: none;
+}
+.saibaMaisbtn{
+    background-color: #318ead;
+}
+.saibaMaisbtn:hover{
+    transition: 500ms;
+    color: #225a76;
+
+    background-color: #a7e7f6;
+
+}
+
+
+.hospedagens {
+    width: 100%;
+    height: 135vh;
+    display:flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    background-color: #eff1f3;
+    overflow-y: auto;
+}
+
+.optionhospedagens {
+    height: 80ch;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.optionhospedagens::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+.option{
+    margin: 2ch ;
+    padding:1ch;
+    width: 15%;
+    height: 50%;
+    box-shadow: 1ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 7px -4px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transition: 200ms;
+}
+.option:hover{
+transform: translateY(-2%);
+}
+
+.imageoption{
+    display: flex;
+    width: 100%;
+    height:80% ;
+    justify-content: center;
+ 
+}
+.hotelsobrenos{
+    width: 100%;
+    height: 80ch;
+}
+
+.imageoption img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.descriptionOption{
+    text-align: center;
+
+    word-wrap: break-word;
+    width: 100%;
+    height: 100%;
+}
+.descriptionOption p{
+    width: 100%;
+    height: 90%;
+}
+.descriptionOption h3{
+  color: #318ead;
+}
 
 
 
