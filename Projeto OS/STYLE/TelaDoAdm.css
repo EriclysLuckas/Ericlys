@@ -224,13 +224,16 @@ section.principal {
     
 
 }
+#Reservaoption{
+    width: 100%;
+   
+}
 
-
-reservabtn, .saibaMaisbtn {
+ .saibaMaisbtn {
     background: #3fcef6;
     color: #eff1f3;
     cursor: pointer;
-    width: 20ch;
+    width: 100%;
     height: 4ch;
     border: none;
 }
@@ -340,16 +343,20 @@ transform: translateY(-2%);
         
         min-width: 20ch;
     }
-    
+
+ 
 }
+
 
 
 /* ==================================== MOBILE ========================================*/
 @media (width <=450px) {
+    
     .conteudo{
         max-height: 85vh;
         
     }
+
  
    
     .MenuN {
@@ -391,7 +398,7 @@ transform: translateY(-2%);
 
     }
   
-
+   
 }
 
 /*==================     conteudo principal mobile */

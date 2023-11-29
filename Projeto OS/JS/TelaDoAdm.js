@@ -1,111 +1,87 @@
 function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        file = elmnt.getAttribute("include");
+    var elements = document.querySelectorAll('[include]');
+    
+    elements.forEach(function(element) {
+        var file = element.getAttribute('include');
         if (file) {
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                    if (this.status == 200) {
-                        elmnt.innerHTML = this.responseText;
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Page not found.');
                     }
-                    if (this.status == 404) {
-                        elmnt.innerHTML = "Page not found.";
-                    }
-                    elmnt.removeAttribute("include");
+                    return response.text();
+                })
+                .then(html => {
+                    element.innerHTML = html;
+                    element.removeAttribute('include');
                     includeHTML();
-                }
-            };
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            return;
+                })
+                .catch(error => {
+                    console.error(error);
+                    element.innerHTML = 'Page not found.';
+                });
         }
-    }
+    });
 }
 
-document.getElementById("Home").addEventListener("click", function(event) {
-    event.preventDefault();
-    setActiveOption("Home");
+function setupMenuOption(menuItemId, filePath) {
+    var menuItem = document.getElementById(menuItemId);
 
-    loadHTML("Cadastros/CadastroClientes.html", document.getElementById("contentDiv"));
-});
-
-document.getElementById("Cadastros").addEventListener("click", function(event) {
-    event.preventDefault();
-   
-    setActiveOption("Cadastros");
-    loadHTML("Cadastros/CadastroClientes.html", document.getElementById("contentDiv"));
-    
-});
-
-
-
-document.getElementById("Produtos").addEventListener("click", function(event) {
-    event.preventDefault();
-    setActiveOption("Produtos");
-
-    loadHTML("Cadastros/CadastroIncluir/Reservas.html", document.getElementById("contentDiv"));
-});
-
-
-document.getElementById("Administrador").addEventListener("click", function(event) {
-    event.preventDefault();
-    setActiveOption("Administrador");
-
-    loadHTML("CadastroAdm.html", document.getElementById("contentDiv"));
-});
-document.getElementById("Ajuda").addEventListener("click", function(event) {
-    event.preventDefault();
-    setActiveOption("Ajuda");
-
-    loadHTML("Ajuda.html", document.getElementById("contentDiv"));
-});
-document.getElementById("Sair").addEventListener("click", function(event) {
-    event.preventDefault();
-    setActiveOption("Sair");
-
-    loadHTML("Sair.html", document.getElementById("contentDiv"));
-});
+    if (menuItem) {
+        menuItem.addEventListener("click", function (event) {
+            event.preventDefault();
+            setActiveOption(menuItemId);
+            loadHTML(filePath, document.getElementById("contentDiv"));
+        
+        
+        });
+    } else {
+        console.error("Element with ID '" + menuItemId + "' not found.");
+    }
+}
 
 function loadHTML(file, elmnt) {
-    var xhttp;
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-            if (this.status == 200) {
-                elmnt.innerHTML = this.responseText;
+    fetch(file)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Page not found.');
             }
-            if (this.status == 404) {
-                elmnt.innerHTML = "Page not found.";
-            }
-        }
-    };
-    xhttp.open("GET", file, true);
-    xhttp.send();
+            return response.text();
+        })
+        .then(html => {
+            elmnt.innerHTML = html;
+        })
+        .catch(error => {
+            console.error(error);
+            elmnt.innerHTML = 'Page not found.';
+        });
 }
 
-includeHTML();
-window.addEventListener("DOMContentLoaded", function() {
-    loadHTML("Cadastros/CadastroClientes.html", document.getElementById("contentDiv"));
-    
-});
-
-
-
-
-// Select ative
 function setActiveOption(optionId) {
     var options = document.getElementsByClassName("Lista");
-    for (var i = 0; i < options.length; i++) {
-        options[i].classList.remove("active");
+    Array.from(options).forEach(function (option) {
+        option.classList.remove("active");
+    });
+
+    var selectedOption = document.getElementById(optionId);
+    if (selectedOption) {
+        selectedOption.classList.add("active");
+    } else {
+        console.error("Element with ID '" + optionId + "' not found.");
     }
+}
 
-    var option = document.getElementById(optionId);
-    option.classList.add("active");
-}setActiveOption("Home"); // Define a primeira opção como ativa
+document.addEventListener('DOMContentLoaded', function () {
+    includeHTML();
+    setupMenuOption("Home", "Cadastros/CadastroClientes.html");
+    setupMenuOption("Cadastros", "Cadastros/CadastroClientes.html");
+    setupMenuOption("Produtos", "Cadastros/CadastroIncluir/Reservas.html");
+    setupMenuOption("Administrador", "");
+    setupMenuOption("Ajuda", "Ajuda.html");
+    setupMenuOption("Sair", "Sair.html");
+});
 
-
-
+// Define a primeira opção como ativa
+setActiveOption("Home");
+//==========================================================================================
 

@@ -51,7 +51,7 @@ body {
 
 
 
-.BtnAdd button{
+.BtnAdd button, .BtnAddReservas button{
     width: 10ch;
     height:3ch;
     background-color: #59cbe8a6; 
@@ -63,7 +63,7 @@ body {
     border-radius: 0.5ch;
 }
 
-.BtnAdd button:hover {
+.BtnAdd button:hover, .BtnAddReservas button:hover{
     background-color: #59cbe8; 
     border: 0.1ch solid #FFFFFF;
     color: #FFFFFF;
@@ -208,4 +208,6 @@ td,  th{
    border: none;
 
 }
+
+
 
