@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Reservas</title>
+    <link rel="stylesheet" href="reservas.css">
+</head>
+
+<body>
+    <div class="monstro">
+        <main class="container">
+        
+            <h2>Cadastro de Reservas</h2>
+            <form action="">
+                <br>
+            <div class="inputBox">
+                    <input type="tel" name="CPF" id="CPF" class="inputUser" required>
+                    <label for="CPF" class="labelInput">CPF ou CNPJ</label>
+            </div>
+                <br>
+    
+            <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+            </div>
+            <br>
+    
+            <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+            </div>
+            <br>
+    
+            <div class="inputBox">
+                    <input type="text" name="Contato" id="Contato" class="inputUser" required>
+                    <label for="Contato" class="labelInput">Contato</label>
+            </div>
+            <br>
+    
+                <div class="inputBox">
+                    <input type="text" name="Numero de adultos" id="Numero de Adutos" class="inputUser" required>
+                    <label for="Numero de Adultos" class="labelInput">Numero de Adultos</label>
+            </div>
+            <br>
+    
+                <div class="inputBox">
+                    <input type="text" name="Numero de Crianças" id="Numero de Crianças" class="inputUser" required>
+                    <label for="Numero de Crianças" class="labelInput">Numero de Crianças</label>
+            </div>
+             <br>
+    
+            <div class="select-container">
+                    <label for="Quarto"><b>Escolha o Quarto</b></label>
+                    <select name="Quarto" id="Quarto" required>
+                    <option value="" selected disabled>Quarto disponivel</option>
+                    <option value="quarto1" data-preco="100">Quarto Luxo 1</option>
+                    <option value="quarto2" data-preco="150">Quarto 2</option>
+                    <option value="quarto3" data-preco="200">Quarto 3</option>
+            </select>
+            </div>
+    
+              
+                   <label for="data_checkin"><b>Data de Check-In</b></label>
+                   <input type="date" name="data_checkin" id="data_checkin" required>
+    
+                   <label for="data_checkout"><b>Data de Check-Out</b></label>
+                   <input type="date" name="data_checkout" id="data_checkout" required>
+                
+    
+            <div class="button-container clearfix">
+                    <p id="resultadoHotel"></p>
+                    <p id="valorHotel"></p>
+                    <p id="valorTotal"></p>
+                    <br>
+                    <input type="submit" name="submit" id="submit" value="Aceitar Reserva">
+                    <button type="button" onclick="calcularHotel()" class="inputUser" id="calcularDiaria">Calcular Diária</button>
+            </div>
+    
+    
+    
+              <script>
+                    function calcularHotel() {
+                        var dataCheckIn = new Date(document.getElementById('data_checkin').value);
+                        var dataCheckOut = new Date(document.getElementById('data_checkout').value);
+                        var quartoSelecionado = document.getElementById('Quarto');
+                        var precoHotel = parseFloat(quartoSelecionado.options[quartoSelecionado.selectedIndex].dataset.preco);
+                
+                        
+                        if (isNaN(dataCheckIn) || isNaN(dataCheckOut) || dataCheckOut <= dataCheckIn) {
+                            alert('Por favor, insira datas válidas.');
+                            return;
+                        }
+  
+                        var diferencaMilissegundos = dataCheckOut - dataCheckIn;
+
+                        var diasHotel = diferencaMilissegundos / (1000 * 60 * 60 * 24);
+
+                        var valorHotel = diasHotel * precoHotel;
+                        var valorTotal = valorHotel;
+ 
+                        var resultadoString = 'Dias de Diária: ' + diasHotel + '\n' +
+                                              'Preço da Diária: R$ ' + valorHotel.toFixed(2) + '\n' +
+                                              'Valor Total a Pagar: R$ ' + valorTotal.toFixed(2);
+                
+                        
+                        alert(resultadoString);
+                    }
+              </script>
+            </form>
+        </main>
+
+    </div>
+   
+</body>
+
+</html>

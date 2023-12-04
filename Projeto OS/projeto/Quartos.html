@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Quartos</title>
+    <link rel="stylesheet" href="Quartos.css">
+</head>
+<body>
+
+    <div class="monstro">
+    
+    <main class="container"><h2>Cadastro de Quartos</h2>
+        <form action="">
+            
+        <br>
+        <div class="inputBox">
+            <input type="text" name="Numero quarto" id="Numero quarto" class="inputUser" required>
+            <label for="Numero quarto" class="labelInput">Numero quarto</label>
+        </div>
+        <br><br>
+    
+    
+        <div class="inputBox">
+            <input type="number" name="preco_diaria" id="preco_diaria" class="inputUser" step="0.01" required>
+            <label for="preco_diaria" class="labelInput">Valor da Diaria</label>
+            </div>
+        <br>
+        <div class="select-container">
+        <label for="Tipo_de_Quarto"><b>Tipo de Quarto</b></label>
+        <select name="Tipo_de_Quarto" id="Tipo_de_Quarto" required>
+            
+            <option value="" selected disabled>Escolha o Tipo</option>
+            <option value="Standart" >Standart</option>
+            <option value="casal" >casal</option>
+            <option value="Solteiro" >Solteiro</option>
+
+        </select>
+        </div>
+    
+        <input type="submit" name="submit" id="submit"value="Cadastrar Quarto">
+            
+        </form>
+        </main>   
+</div>
+
+</body>
+</html>
