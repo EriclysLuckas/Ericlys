@@ -1,28 +1,42 @@
 
-* {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-.monstro {
-    
-    background: linear-gradient(45deg, #eff1f3, #EFF1F3);
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    align-items: center;
+.ModalCadastroReservas {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.226);
+    border-radius: 5px;
+    padding: 2rem;
     justify-content: center;
+    align-items: center;
+}
+.formReservas{
+    width: 100%;
+    height: 80%;
+
 }
 
+.cabecalhoAddReservas{
+    display: flex;
+    justify-content: space-between;
+    color: #59cbe8;
+    width: 100%;
+    
+}
+.cabecalhoAddReservas button{
+    background-color: transparent;
+    border: none;
+    font-size: 3ch;
+    color: #59cbe8;
+    cursor: pointer;
+}
 main.container {
-    color: rgb(255, 255, 255);
-    background-color: #225A76;
-    min-width: 320px;
-    min-height: 20px;
+    background-color: #f4f8f9;
+    width: 100%;
     padding: 2rem;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -67,7 +81,6 @@ form {
     border: none;
     border-bottom: 1px solid rgb(8, 8, 8);
     outline: none;
-    color: rgb(255, 255, 255);
     font-size: 15px;
     width: 100%;
     letter-spacing: 2px;
@@ -85,7 +98,7 @@ form {
 .inputUser:valid ~ .labelInput{
     top: -20px;
     font-size: 18px;
-    color: rgb(250, 250, 250);
+    color: #59cbe8;
 }
 
 #data_checkin{

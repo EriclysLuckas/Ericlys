@@ -11,6 +11,46 @@ function handleSubmit(event) {
     closeModalAddClientes();
 
 }
+
+//MODAL DE RESERVAS 
+function openModalAddReservas(){
+    const ModalAddReservas = document.querySelector('.ModalCadastroReservas')
+    openModalAddReservas.style.display = 'flex'
+
+
+
+    const closeButton = ModalAddReservas.querySelector('.fechaModalReservas');
+
+
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModalAddReservas);
+    } else {
+        console.error('Botão de fechar não encontrado dentro do modal');
+    }
+    const submitButton = ModalAddReservas.querySelector('input[type="submit"]');
+    if (submitButton) {
+        submitButton.addEventListener('click', handleSubmit);
+    } else {
+        console.error('Botão de submit não encontrado dentro do modal');
+    }
+
+}
+
+
+function closeModalAddReservas() {
+    const ModalAddReservas = document.querySelector('.ModalCadastroReservas');
+    if (ModalAddReservas) {
+        
+        ModalAddReservas.style.display = 'none';
+    } else {
+        console.error('Elemento .ModalClientes não encontrado');
+    }
+}
+
+
+
+
+//MODAL DE CLIENTES 
 function openModalAddClientes(){
     const ModalAddClientes = document.querySelector('.ModalClientes')
     ModalAddClientes.style.display = 'flex'
