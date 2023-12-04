@@ -25,7 +25,7 @@
     justify-content: space-between;
     color: #59cbe8;
     width: 100%;
-    
+
 }
 .cabecalhoAddReservas button{
     background-color: transparent;
@@ -36,7 +36,7 @@
 }
 main.container {
     background-color: #f4f8f9;
-    width: 100%;
+    width: 150%;
     padding: 2rem;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -129,9 +129,9 @@ form input[type="submit"] {
     margin-top: 2rem;
     padding: 0.4rem;
     width: 100%;
-    background: linear-gradient(to left, #1B1F27, #1B1F27);
+    background:#59cbe8;
     cursor: pointer;
-    color: rgb(0, 0, 0);
+    color: #f4f8f9;
     font-size: 0.9rem;
     font-weight: 300;
     border-radius: 4px;
@@ -140,16 +140,16 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     letter-spacing: 0.5px;
-    background: linear-gradient(to right, #0E0B16, #0E0B16);
+    background:#f4f8f9;
 }
 #submit,
 .inputUser[type="button"] {
     border-bottom: 1px solid rgb(0, 0, 0);
     margin: 0;
     padding: 0.4rem;
-    background: linear-gradient(to left, #1B1F27, #1B1F27);
+    background:#f4f8f9;
     cursor: pointer;
-    color: white;
+    color: #59cbe8;
     font-size: 0.9rem;
     font-weight: 300;
     border-radius: 4px;
