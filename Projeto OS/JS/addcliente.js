@@ -1,16 +1,33 @@
 window.onload = function () {
     
     document.getElementById("contentDiv").addEventListener("click", function(event) {
-        const btnAdd = event.target.closest('.BtnAdd');
-        if (btnAdd) {
+        const Addclientes = event.target.closest('.BtnAdd');
+        if (Addclientes) {
+            
+console.log("Adicionar Clientes")
             
 
         }
     });
     document.getElementById("contentDiv").addEventListener("click", function(event) {
-        const btnAdd1 = event.target.closest('.BtnAddReservas');
-        if (btnAdd1) {
-            console.log("teste1");
+        const AddReservas = event.target.closest('.BtnAddReservas');
+        if (AddReservas) {
+            console.log("MODAL ADD RESERVAS");
         }
     });
+    
+document.getElementById("contentDiv").addEventListener("click", function(event) {
+    const Editarcadastro = event.target.closest('.AlterarBtnClientes');
+    if (Editarcadastro) {
+        console.log("Detalhes");
+    }
+});
+document.getElementById("contentDiv").addEventListener("click", function(event) {
+    const ExcluirCadastro = event.target.closest('.AlterarBtnClientes');
+    if (ExcluirCadastro) {
+        console.log("Excluir");
+    }
+});
+
 };
+

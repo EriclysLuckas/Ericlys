@@ -84,4 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Define a primeira opção como ativa
 setActiveOption("Home");
 //==========================================================================================
+var homeFile = "Cadastros/CadastroClientes.html";
+var contentDiv = document.getElementById("contentDiv");
+loadHTML(homeFile, contentDiv);
 
