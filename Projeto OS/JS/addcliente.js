@@ -15,7 +15,7 @@ function handleSubmit(event) {
 //MODAL DE RESERVAS 
 function openModalAddReservas(){
     const ModalAddReservas = document.querySelector('.ModalCadastroReservas')
-    openModalAddReservas.style.display = 'flex'
+    ModalAddReservas.style.display = 'flex'
 
 
 
@@ -114,7 +114,7 @@ console.log("Adicionar Clientes")
         const AddReservas = event.target.closest('.BtnAddReservas');
         if (AddReservas) {
             console.log("MODAL ADD RESERVAS");
-        
+            openModalAddReservas()
         }
     });
     
