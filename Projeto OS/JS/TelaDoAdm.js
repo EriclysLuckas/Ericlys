@@ -73,10 +73,10 @@ function setActiveOption(optionId) {
 
 document.addEventListener('DOMContentLoaded', function () {
     includeHTML();
-    setupMenuOption("Home", "Cadastros/CadastroClientes.html");
+    setupMenuOption("Home", "Cadastros/home.html");
     setupMenuOption("Cadastros", "Cadastros/CadastroClientes.html");
     setupMenuOption("Produtos", "Cadastros/CadastroIncluir/Reservas.html");
-    setupMenuOption("Administrador", "");
+    setupMenuOption("Administrador", "Ajuda.html");
     setupMenuOption("Ajuda", "Ajuda.html");
     setupMenuOption("Sair", "Sair.html");
 });
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Define a primeira opção como ativa
 setActiveOption("Home");
 //==========================================================================================
-var homeFile = "Cadastros/CadastroClientes.html";
+var homeFile = "Cadastros/Home.html";
 var contentDiv = document.getElementById("contentDiv");
 loadHTML(homeFile, contentDiv);
 

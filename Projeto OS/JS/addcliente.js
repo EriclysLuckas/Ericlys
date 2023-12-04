@@ -3,18 +3,54 @@
 function openModalAddClientes(){
     const ModalAddClientes = document.querySelector('.ModalClientes')
     ModalAddClientes.style.display = 'flex'
+
+
+
+    const closeButton = ModalAddClientes.querySelector('.fechaModalClientes');
+
+
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModalAddClientes);
+    } else {
+        console.error('Botão de fechar não encontrado dentro do modal');
+    }
 }
 
+
+function closeModalAddClientes() {
+    const ModalAddClientes = document.querySelector('.ModalClientes');
+    if (ModalAddClientes) {
+        ModalAddClientes.style.display = 'none';
+    } else {
+        console.error('Elemento .ModalClientes não encontrado');
+    }
+}
+
+
+
+
 window.onload = function () {
-    
+     /* Clientes modal */   
+
     document.getElementById("contentDiv").addEventListener("click", function(event) {
         const Addclientes = event.target.closest('.BtnAdd');
+        
         if (Addclientes) {
             
 console.log("Adicionar Clientes")
             openModalAddClientes()
         }
     });
+
+
+
+
+
+
+
+
+
+ /* Reservas modal */   
     document.getElementById("contentDiv").addEventListener("click", function(event) {
         const AddReservas = event.target.closest('.BtnAddReservas');
         if (AddReservas) {
