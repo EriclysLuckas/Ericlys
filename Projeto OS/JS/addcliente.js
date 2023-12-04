@@ -1,3 +1,5 @@
+
+
 window.onload = function () {
     
     document.getElementById("contentDiv").addEventListener("click", function(event) {
@@ -5,7 +7,7 @@ window.onload = function () {
         if (Addclientes) {
             
 console.log("Adicionar Clientes")
-            
+
 
         }
     });
@@ -13,6 +15,7 @@ console.log("Adicionar Clientes")
         const AddReservas = event.target.closest('.BtnAddReservas');
         if (AddReservas) {
             console.log("MODAL ADD RESERVAS");
+        
         }
     });
     

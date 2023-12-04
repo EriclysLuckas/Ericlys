@@ -88,3 +88,5 @@ var homeFile = "Cadastros/CadastroClientes.html";
 var contentDiv = document.getElementById("contentDiv");
 loadHTML(homeFile, contentDiv);
 
+
+
