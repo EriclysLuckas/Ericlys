@@ -1,5 +1,10 @@
 
 
+function openModalAddClientes(){
+    const ModalAddClientes = document.querySelector('.ModalClientes')
+    ModalAddClientes.style.display = 'flex'
+}
+
 window.onload = function () {
     
     document.getElementById("contentDiv").addEventListener("click", function(event) {
@@ -7,8 +12,7 @@ window.onload = function () {
         if (Addclientes) {
             
 console.log("Adicionar Clientes")
-
-
+            openModalAddClientes()
         }
     });
     document.getElementById("contentDiv").addEventListener("click", function(event) {
