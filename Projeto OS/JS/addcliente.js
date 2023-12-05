@@ -1,6 +1,5 @@
 
 function handleSubmit(event) {
-    // Evita o comportamento padrão de envio do formulário (atualização da página)
     event.preventDefault();
 
 //lógica do back
@@ -13,6 +12,10 @@ function handleSubmit(event) {
             input.value = '';
         }
     });
+
+
+
+    
     // Fecha o modal após o envio
     closeModalAddClientes();
 }
