@@ -73,18 +73,20 @@ function setActiveOption(optionId) {
 
 document.addEventListener('DOMContentLoaded', function () {
     includeHTML();
-    setupMenuOption("Home", "Projeto OS/html/Cadastros/CadastroIncluir/Reservas.html");
+    setupMenuOption("Home", "Projeto OS/html/Cadastros/Reservas.html");
     setupMenuOption("Cadastros", "Projeto OS/html/Cadastros/CadastroClientes.html");
     setupMenuOption("Produtos", "Projeto OS/html/Cadastros/Quartos.html");
-    setupMenuOption("Administrador", "Projeto OS/html/Cadastros/Administrador.html");
-    setupMenuOption("Ajuda", "Projeto OS/html/Cadastros/Ajuda.html");
-    setupMenuOption("Sair", "Sair.html");
+    setupMenuOption("Administrador", "Projeto OS/html/Cadastros/usuarios.html");
+    setupMenuOption("CadastroReservas", "Projeto OS/html/Cadastros/CadastrarReserva.html");
+    setupMenuOption("CadastroClientes", "Projeto OS/html/Cadastros/IncluirClientes.html");
+    setupMenuOption("CadastroUsuarios", "Projeto OS/html/Cadastros/CadastrarUsuario.html");
+    setupMenuOption("CadastroQuartos", "Projeto OS/html/Cadastros/CadastrarQuartos.html");
 });
 
 // Define a primeira opção como ativa
 setActiveOption("Home");
 //==========================================================================================
-var homeFile = "Projeto OS/html/Cadastros/CadastroIncluir/Reservas.html";
+var homeFile = "Projeto OS/html/Cadastros/Reservas.html";
 var contentDiv = document.getElementById("contentDiv");
 loadHTML(homeFile, contentDiv);
 

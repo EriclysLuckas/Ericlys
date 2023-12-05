@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de clientes</title>
+    <link rel="stylesheet" href="/Projeto OS/STYLE/CadastroClientes.css">
+<link rel="stylesheet" href="/Projeto OS/STYLE/styleForm.css">
+
+</head>
+<body>
+<div class="contentCadastros">
+    <main class="Header">
+        <div class="contentHeader">
+        <div class="TituloHeader">
+            <span><ion-icon name="people-sharp"id ="iconeTitulo" ></ion-icon></span><p>Cadastrar Clientes </p>
+        </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <div class="ListaCadastros">
+        <div class="monstro">
+    
+        <main class="container">
+            <form id="">
+            
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br><br>
+            
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                
+                <div class="inputBox">
+                    <input type="tel" name="CPF" id="CPF" class="inputUser" required>
+                    <label for="CPF" class="labelInput">CPF ou CNPJ</label>
+                </div>
+                <br>
+            <div class="SxSelection">
+                <h4>Sexo:</h4>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+            
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br>
+            
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label>
+                <br><br>
+                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                <br>
+            </div>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+            
+                <input type="submit" id="submitClientes" value="Cadastrar">
+            
+            </form>
+            </main>
+        </div>  
+    </div> 
+
+    
+</div>
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="/Projeto OS/JS/addcliente.js"></script>
+
+
+
+</body>
+
+</html>
+   
+
+
+
