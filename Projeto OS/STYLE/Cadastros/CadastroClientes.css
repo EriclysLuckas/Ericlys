@@ -141,8 +141,29 @@ font-size: 1.3ch;
     margin: auto;
     border: 0.1ch solid #cacaca;
     margin-bottom: 2ch;
+    overflow-y: auto;
+
 
 }
+.ListaCadastros::-webkit-scrollbar{
+    background-color: transparent;
+}
+.ListaCadastros::-webkit-scrollbar {
+    width: 0.7ch; 
+    height: 0.7ch;           
+  }
+  
+  .ListaCadastros::-webkit-scrollbar-track {
+    background: #f4f8f9;       
+  }
+  
+.ListaCadastros::-webkit-scrollbar-thumb {
+    background-color: #59cbe8;   
+    border-radius: 3ch;       
+    
+  }
+
+
 .ListaCadastrosClientes{
     width: 100%;
     overflow-x: auto;

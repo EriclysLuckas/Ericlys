@@ -1,24 +1,78 @@
 
+// Declare um array para armazenar os dados do formulário
+const dadosDoFormularioArray = [];
+
 function handleSubmit(event) {
     event.preventDefault();
 
-//lógica do back
-    // ...
+    // Crie um objeto para armazenar os dados do formulário
+    const dadosDoFormulario = {};
+
+    // Obtenha todos os campos do formulário
     const form = event.target;
     const inputs = form.querySelectorAll('input');
-    
+
+    // Preencha o objeto com os valores dos campos do formulário
+    inputs.forEach(input => {
+        if (input.type !== 'submit') {
+            dadosDoFormulario[input.name] = input.value;
+        }
+    });
+
+    // Adicione o objeto ao array
+    dadosDoFormularioArray.push(dadosDoFormulario);
+
+    // Limpe os campos do formulário (opcional)
     inputs.forEach(input => {
         if (input.type !== 'submit') {
             input.value = '';
         }
     });
 
+    // Faça algo com o array de dados do formulário (por exemplo, exiba no console)
+    console.log('Dados do Formulário Array:', dadosDoFormularioArray);
 
-
-    
     // Fecha o modal após o envio
     closeModalAddClientes();
 }
+
+// function handleSubmit(event) {
+//     event.preventDefault();
+
+// //lógica do back
+
+// function submitForm() {
+//     var formData = new FormData(document.getElementById('formteste'));
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', 'enviarusuario.php', true);
+//     xhr.onload = function () {
+//         if (xhr.status === 200) {
+//             // Ação após o sucesso (opcional)
+//             alert('Formulário enviado com sucesso!');
+//             closeModalAddClientes();
+//         } else {
+//             // Ação em caso de falha (opcional)
+//             alert('Erro ao enviar o formulário. Tente novamente mais tarde.');
+//         }
+//     };
+//     xhr.send(formData);
+// }
+//     // ...
+//     const form = event.target;
+//     const inputs = form.querySelectorAll('input');
+    
+//     inputs.forEach(input => {
+//         if (input.type !== 'submit') {
+//             input.value = '';
+//         }
+//     });
+
+
+        
+//     submitForm()
+//     // Fecha o modal após o envio
+//     closeModalAddClientes();
+// }
 
 //MODAL DE RESERVAS 
 function openModalAddReservas(){

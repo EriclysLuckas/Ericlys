@@ -73,9 +73,9 @@ function setActiveOption(optionId) {
 
 document.addEventListener('DOMContentLoaded', function () {
     includeHTML();
-    setupMenuOption("Home", "Cadastros/home.html");
+    setupMenuOption("Home", "Projeto OS/html/Cadastros/CadastroIncluir/Reservas.html");
     setupMenuOption("Cadastros", "Projeto OS/html/Cadastros/CadastroClientes.html");
-    setupMenuOption("Produtos", "Projeto OS/html/Cadastros/CadastroIncluir/Reservas.html");
+    setupMenuOption("Produtos", "Projeto OS/html/Cadastros/Quartos.html");
     setupMenuOption("Administrador", "Projeto OS/html/Cadastros/Administrador.html");
     setupMenuOption("Ajuda", "Projeto OS/html/Cadastros/Ajuda.html");
     setupMenuOption("Sair", "Sair.html");
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Define a primeira opção como ativa
 setActiveOption("Home");
 //==========================================================================================
-var homeFile = "Cadastros/Home.html";
+var homeFile = "Projeto OS/html/Cadastros/CadastroIncluir/Reservas.html";
 var contentDiv = document.getElementById("contentDiv");
 loadHTML(homeFile, contentDiv);
 
