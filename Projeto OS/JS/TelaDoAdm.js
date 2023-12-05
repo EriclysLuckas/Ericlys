@@ -74,7 +74,7 @@ function setActiveOption(optionId) {
 document.addEventListener('DOMContentLoaded', function () {
     includeHTML();
     setupMenuOption("Home", "Cadastros/home.html");
-    setupMenuOption("Cadastros", "Cadastros/CadastroClientes.html");
+    setupMenuOption("Cadastros", "/Projeto OS/html/Cadastros/CadastroClientes.html");
     setupMenuOption("Produtos", "Cadastros/CadastroIncluir/Reservas.html");
     setupMenuOption("Administrador", "Ajuda.html");
     setupMenuOption("Ajuda", "Ajuda.html");
