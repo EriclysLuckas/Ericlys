@@ -1,15 +1,20 @@
 
 function handleSubmit(event) {
+    // Evita o comportamento padrão de envio do formulário (atualização da página)
     event.preventDefault();
 
-    // formulário para o backend
+//lógica do back
     // ...
-    const form = event.target.form;
-    form.reset();
-
+    const form = event.target;
+    const inputs = form.querySelectorAll('input');
+    
+    inputs.forEach(input => {
+        if (input.type !== 'submit') {
+            input.value = '';
+        }
+    });
     // Fecha o modal após o envio
     closeModalAddClientes();
-
 }
 
 //MODAL DE RESERVAS 
@@ -52,24 +57,23 @@ function closeModalAddReservas() {
 
 //MODAL DE CLIENTES 
 function openModalAddClientes(){
-    const ModalAddClientes = document.querySelector('.ModalClientes')
-    ModalAddClientes.style.display = 'flex'
+    const ModalAddClientes = document.querySelector('.ModalClientes');
+    ModalAddClientes.style.display = 'flex';
 
-
-
+    // Adiciona um evento de clique ao botão de fechar dentro do modal
     const closeButton = ModalAddClientes.querySelector('.fechaModalClientes');
-
-
     if (closeButton) {
         closeButton.addEventListener('click', closeModalAddClientes);
     } else {
         console.error('Botão de fechar não encontrado dentro do modal');
     }
-    const submitButton = ModalAddClientes.querySelector('input[type="submit"]');
-    if (submitButton) {
-        submitButton.addEventListener('click', handleSubmit);
+
+    // Adiciona um evento de envio ao formulário dentro do modal
+    const form = ModalAddClientes.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', handleSubmit);
     } else {
-        console.error('Botão de submit não encontrado dentro do modal');
+        console.error('Formulário não encontrado dentro do modal');
     }
 
 }
